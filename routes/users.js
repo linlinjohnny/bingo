@@ -30,15 +30,11 @@ router.get('/name/:account', function(req, res, next) {
     res.send('respond with a resource');
 });
 
-router.post('/ax_register', function(req, res, next) {
-console.log(req.body);
-
-    userLib.create(req.body,
-    function(data){
-res.send('ddddddddddddd');
+router.post('/ax_register', (req, res, next) => {
+    userLib.create(req.body,(data) => {
+console.log(data);
+         res.send(data);
     });
-        res.render('user_login', { title: '登入' });
-
 });
 
 module.exports = router;
