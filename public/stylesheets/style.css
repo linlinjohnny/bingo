@@ -1,3 +1,4 @@
+html { font-size:75% } /* 16px*75%=12px */
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -5,4 +6,31 @@ body {
 
 a {
   color: #00B7FF;
+}
+.title {
+    font-size:2rem;
+}
+
+.roomItem {
+    width: 350px;
+    min-height:50px;
+    font-size:1rem;
+
+    padding: 5px;
+    background-color:#AAA;
+}
+
+.roomItem.active {
+    opacity: 0.5;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+.longinPanel {
+    width:500px;
+    padding: 15px;
+    border: 1px solid #AAA;
+    border-radius: 5px;
 }

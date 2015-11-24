@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+    <head>
+        <%- include head.ejs %>
+    </head>
+    <body>
+        <%- include topBar.ejs %>
+        
+        <div class="row">
+            <% var room=[
+                    {room_name:'bingoRoom',
+                     owner_img:'images/user_default.jpg',
+                     active:'',
+                     user_num:5
+                    },
+                    {room_name:'bingoRoom2',
+                     owner_img:'images/user_default.jpg',
+                     active:'active',
+                     user_num:4
+                    },
+                    {room_name:'bingoRoom3',
+                     owner_img:'images/user_default.jpg',
+                     active:'',
+                     user_num:3
+                    },
+                    {room_name:'bingoRoom4',
+                     owner_img:'images/user_default.jpg',
+                     active:'',
+                     user_num:2
+                    },
+                ]; %>
+
+            <% room.forEach(function(value, index) {%>
+               <% var i =3; %>
+               <div class='col-md-4 roomItem <%= value.active%>'>
+                   <div>
+                       <img src='<%= value.owner_img %>'>
+                   </div>
+                   <div>
+                       <div class='title'>
+                           <%= value.room_name %>
+                       </div>
+                       <div class='num'>
+                           <span>目前人數: </span><%= value.user_num %>
+                       </div>
+                   </div>
+               </div>
+            <%  })%>
+        </div>
+
+        <%- include footer.ejs %>
+    </body>
 </html>
