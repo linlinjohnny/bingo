@@ -2,16 +2,6 @@ var express = require('express');
 var router = express.Router();
 var Q = require('q');
 var userLib = require('../lib/userLib');
-userLib.get({
-    userID:1,
-    is_get_one:true
-}, function(data){
-console.log(data);
-console.log(data[0].id);
-    // var rdata = {};
-    // rdata.id=data[0].id;
-console.log(rdata)
-});
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
