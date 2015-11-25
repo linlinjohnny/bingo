@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include head.ejs %>
+    </head>
+    <body>
+        <%- include topBar.ejs %>
+        <div class='longinPanel container-fluid'>
+            <div class='title'>
+                登入
+            </div>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputAccount" class="col-md-4 control-label">Account</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="inputAccount" placeholder="Account">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPwd" class="col-md-4 control-label">Password</label>
+                    <div class="col-md-8">
+                        <input type="password" class="form-control" id="inputPwd" placeholder="Password">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-4 col-md-8 text-right">
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </div>
+                </div>
+            </form>
+            <a href='/users/register'>註冊</a>
+        </div>
+
+        <%- include footer.ejs %>
+    </body>
+</html>
